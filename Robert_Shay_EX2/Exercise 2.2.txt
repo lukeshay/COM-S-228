@@ -1,0 +1,3 @@
+a) The output will be "10 10 10 10 10 10".
+
+b) It will mess up all the other methods except clear() and remove() because it makes it so all of the nodes are equal to each other.
