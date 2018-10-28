@@ -1,0 +1,70 @@
+package edu.iastate.summer18.cs228.hw6;
+
+/**
+ * An interface for describing basic getter functionality for a node
+ * 
+ * @author Robert Shay
+ * 
+ * @param <K>
+ * @param <V>
+ */
+public interface EntryNode<K, V> {
+
+	/**
+	 * Returns the parent node of this node. If there is no parent node,
+	 * <code>null</code> is returned.
+	 * 
+	 * @return
+	 */
+	public EntryNode<K, V> parent();
+
+	/**
+	 * 
+	 * <p>
+	 * Returns the child node of this node. If a node has multiple children,
+	 * then this returns the left-most child. E.g.,
+	 * </p>
+	 * 
+	 * <pre>
+	 *          Parent
+	 *            |
+	 * null <-> Child <-> Sibling <-> Sibling ...
+	 * </pre>
+	 * <p>
+	 * If there is no child node, <code>null</code> is returned.
+	 * </p>
+	 * 
+	 * @return
+	 */
+	public EntryNode<K, V> child();
+
+	/**
+	 * Returns the next sibling of this node. If there is no next sibling,
+	 * <code>null</code> is returned.
+	 * 
+	 * @return
+	 */
+	public EntryNode<K, V> next();
+
+	/**
+	 * Returns the previous sibling of this node. If there is no previous
+	 * sibling, <code>null</code> is returned.
+	 * 
+	 * @return
+	 */
+	public EntryNode<K, V> prev();
+
+	/**
+	 * Returns the (non-null) key for this node.
+	 * 
+	 * @return
+	 */
+	public K key();
+
+	/**
+	 * Returns the value for this node.
+	 * 
+	 * @return
+	 */
+	public V value();
+}
